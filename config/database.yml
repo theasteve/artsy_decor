@@ -12,7 +12,7 @@ default: &default
 development:
   adapter: postgresql
   encoding: unicode
-  database: blog_development
+  database: artsy_decor_development
   pool: 5
 
 # Warning: The database defined as "test" will be erased and
