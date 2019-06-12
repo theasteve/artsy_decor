@@ -1,0 +1,31 @@
+<h1>Profile#new</h1>
+<p>Find me in app/views/profile/new.html.erb</p>
+
+<%= form_for @profile do |f| %>
+  <div class="form-group">
+    <%= f.label :avatar %>
+    <%= f.file_field :avatar, as: :file, class: "form-control" %>
+  </div>
+
+   <div class="form-group">
+     <%= f.label :full_name, 'Full Name' %>
+     <%= f.text_field :full_name, autofocus: true, class: "form-control" %>
+   </div>
+
+   <div class="form-group">
+     <%= f.label :city, 'City' %>
+     <%= f.text_field :city, class: "form-control" %>
+   </div>
+
+   <div class="form-group">
+     <%= f.label :bio, 'Bio'%>
+       <p> Why did you join ArtsySpace?
+       What should other people here know about you?
+       </p>
+     <%= f.text_field :bio, class: "form-control"%>
+   </div>
+
+   <div class="form-group">
+     <%= f.submit "Create Profile", class: "btn btn-primary" %>
+   </div>
+<% end %>

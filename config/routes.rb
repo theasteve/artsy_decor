@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'home#index'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  devise_scope :users do
+    resource :profiles, except: :index
+  end
+
+  resources :posts do
+    resource :comments, only: %i[show new create edit update]
+  end
 end
