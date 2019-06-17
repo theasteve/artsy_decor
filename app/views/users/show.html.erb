@@ -1,0 +1,13 @@
+<h1>Users#show</h1>
+<p>Find me in app/views/users/show.html.erb</p>
+
+<p><%= @user.id %><p>
+<p><%= @user.full_name %><p>
+<p>
+
+<p>
+<p><%= @user.city %><p>
+<p><%= @user.bio %><p>
+
+<%= link_to 'edit',  edit_user_path %>
+<%= link_to "Sign out", destroy_user_session_path, method: :delete %>

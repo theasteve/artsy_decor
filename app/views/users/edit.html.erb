@@ -1,8 +1,7 @@
-<h1>Profiles#edit</h1>
-<p>Find me in app/views/profiles/edit.html.erb</p>
+<h1>Users#edit</h1>
+<p>Find me in app/views/users/edit.html.erb</p>
 
-<%= form_for @user do |f| %>
-  <%= form_for @profile do |f| %>
+  <%= form_for @user do |f| %>
     <div class="form-group">
       <%= f.label :avatar %>
       <%= f.file_field :avatar, as: :file, class: "form-control" %>
@@ -30,4 +29,3 @@
       <%= f.submit "Edit profile", class: "btn btn-primary" %>
     </div>
   <% end %>
- <% end %>
