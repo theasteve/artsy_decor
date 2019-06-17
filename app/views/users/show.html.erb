@@ -4,7 +4,9 @@
 <p><%= @user.id %><p>
 <p><%= @user.full_name %><p>
 <p>
-
+  <% if @user.avatar.attached? %>
+    <%= image_tag @user.avatar.variant(resize_to_limit: [100, 100])%>
+  <% end %>
 <p>
 <p><%= @user.city %><p>
 <p><%= @user.bio %><p>
