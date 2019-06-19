@@ -1,0 +1,32 @@
+<nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
+  <div class="flex items-center flex-shrink-0 text-white mr-6">
+    <span class="font-semibold text-xl tracking-tight">🎨 ArtsySpace</span>
+  </div>
+  <div class="block lg:hidden">
+    <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+      <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+    </button>
+  </div>
+  <div class="text-right align-middle w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+    <div class="text-md lg:flex-grow">
+      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+        Community
+      </a>
+      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+        About
+      </a>
+      <% if current_user %>
+        <%= image_tag current_user.avatar, class: 'block lg:inline-block h-12 w-12 rounded-full mx-auto object-cover'%>
+      <% else %>
+        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+          <button class="bg-purple-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+            SIGN UP
+          </button>
+        </a>
+        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
+          LOG IN
+        </a>
+      <% end %>
+    </div>
+  </div>
+</nav>
