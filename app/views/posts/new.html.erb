@@ -1,0 +1,23 @@
+<h1>Post#new</h1>
+<p>Find me in app/views/photos/new.html.erb</p>
+
+<%= form_for @post do |f| %>
+  <div class="form-group">
+    <%= f.label :location, 'Location:' %>
+    <%= f.text_field :location, class: "form-control"%>
+  </div>
+
+   <div class="form-group">
+     <%= f.label :description %>
+     <%= f.text_area :description, class: "form-control" %>
+   </div>
+
+   <div class="form-group">
+     <%= f.label :image %>
+     <%= f.file_field :image, as: :file, class: "form-control" %>
+   </div>
+   
+   <div class="form-group">
+     <%= f.submit "Create", class: "btn btn-primary" %>
+   </div>
+ <% end %>
