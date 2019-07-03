@@ -1,0 +1,20 @@
+<div class="container mx-auto bg-white rounded-lg"
+  <div class="border-t-2 border-grey-lighter">
+    <div class="container mx-auto py-6 my-8">
+      <div class="flex mt-6 ">
+        <div class="w-1/2 bg-grey m-8">
+          <%= image_tag @post.image, class: "rounded" %>
+        </div>
+        <div class="w-1/2 font-serif m-8">
+          <h1 class="text-5xl font-black-darker font-black">  <%= @post.title %></h1>
+          <p class="text-grey-darker py-4 text-lg leading-normal"><%= @post.description %></p>
+            <div class="inline-flex items-center">
+              <%= image_tag @post.user.avatar, class: 'block lg:inline-block h-12 w-12 rounded-full mx-auto object-cover'%>
+              <p class="p-3"><%= @post.user.full_name %></p>
+              <p class="p-3"><%= @post.location %></p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
