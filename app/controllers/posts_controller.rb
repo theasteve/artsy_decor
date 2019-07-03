@@ -16,24 +16,22 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = current_user.posts.create(post_param)
+    @post = current_user.posts.create(post_params)
 
     if @post.save
       redirect_to @post
     else
-      render "new"
+      render 'new'
     end
   end
 
   def update
     @post = Post.find(params[:id])
-    respond_to do |format|
-      if @post.update(post_params)
-        format
-          .html { redirect_to @post, notice: 'Post was successfully updated.' }
-      else
-        format.html { render :edit }
-      end
+
+    if @post.update(post_params)
+      redirect_to @post, notice: 'Post was successfully updated.'
+    else
+      render :edit
     end
   end
 
