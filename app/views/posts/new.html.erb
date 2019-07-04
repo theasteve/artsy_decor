@@ -1,64 +1,59 @@
-<h1>Post#new</h1>
-<p>Find me in app/views/photos/new.html.erb</p>
 
-<%= form_for @post do |f| %>
-  <div class="form-group">
-    <%= f.label :location, 'Location:' %>
-    <%= f.text_field :location, class: "form-control"%>
+<%= form_for @post, html: {class: "w-full max-w-md m-4"} do |f| %>
+  <div class="md:flex md:items-center mb-6">
+    <div class="md:w-1/3">
+      <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
+          <%= f.label :title, 'Title:' %>
+      </label>
+    </div>
+    <div class="md:w-2/3">
+      <%= f.text_field :title, class: "bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" %>
+    </div>
+  </div>
+
+  <div class="md:flex md:items-center mb-6">
+    <div class="md:w-1/3">
+      <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
+          <%= f.label :description, 'Description:' %>
+      </label>
+    </div>
+    <div class="md:w-2/3">
+      <%= f.text_area :description, class: "bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" %>
+    </div>
+  </div>
+
+  <div class="md:flex md:items-center mb-6">
+    <div class="md:w-1/3">
+      <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
+          <%= f.label :location, 'Location:' %>
+      </label>
+    </div>
+    <div class="md:w-2/3">
+      <%= f.text_field :location, class: "bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" %>
+    </div>
+  </div>
+
+  <div class="md:flex md:items-center mb-6">
+    <div class="md:w-1/3">
+      <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
+          <%= f.label :image %>
+      </label>
+    </div>
+    <div class="md:w-2/3">
+      <%= f.file_field :image, as: :file, class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" %>
+    </div>
   </div>
 
    <div class="form-group">
-     <%= f.label :description %>
-     <%= f.text_area :description, class: "form-control" %>
+    <%= f.label :image %>
+      <svg xmlns="http://www.w3.org/2000/svg" class="fill-current text-teal-500 inline-block h-12 w-12" viewBox="0 0 22 22"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4 11h-3v3c0 .55-.45 1-1 1s-1-.45-1-1v-3H8c-.55 0-1-.45-1-1s.45-1 1-1h3V8c0-.55.45-1 1-1s1 .45 1 1v3h3c.55 0 1 .45 1 1s-.45 1-1 1z"/></svg>
+      <%= f.file_field :image, as: :file, class: "form-control" %>
    </div>
 
-   <div class="form-group">
-     <%= f.label :image %>
-     <%= f.file_field :image, as: :file, class: "form-control" %>
-   </div>
-
-   <div class="form-group">
-     <%= f.submit "Create", class: "btn btn-primary" %>
-   </div>
- <% end %>
-
- <form class="w-full max-w-sm">
-   <div class="md:flex md:items-center mb-6">
-     <div class="md:w-1/3">
-       <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
-         Location:
-       </label>
-     </div>
-     <div class="md:w-2/3">
-       <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name" type="text" value="Jane Doe">
-     </div>
-   </div>
-   <div class="md:flex md:items-center mb-6">
-     <div class="md:w-1/3">
-       <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-username">
-         Description:
-       </label>
-     </div>
-     <div class="md:w-2/3">
-       <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-username" type="password" placeholder="******************">
-     </div>
-   </div>
-   <div class="md:flex md:items-center mb-6">
-     <div class="md:w-1/3">
-       <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-username">
-         Description:
-       </label>
-     </div>
-     <div class="md:w-2/3">
-       <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-username" type="password" placeholder="******************">
-     </div>
-   </div>
    <div class="md:flex md:items-center">
      <div class="md:w-1/3"></div>
      <div class="md:w-2/3">
-       <button class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
-         Sign Up
-       </button>
+       <%= f.submit "Create", class: "shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" %>
      </div>
    </div>
- </form>
+ <% end %>
