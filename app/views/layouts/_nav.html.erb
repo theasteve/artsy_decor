@@ -15,17 +15,11 @@
       <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
         About
       </a>
-      <% if current_user %>
+      <% if current_user.avatar.attached? %>
         <%= image_tag current_user.avatar, class: 'block lg:inline-block h-12 w-12 rounded-full mx-auto object-cover'%>
       <% else %>
-        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-          <button class="bg-purple-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-            SIGN UP
-          </button>
-        </a>
-        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
-          LOG IN
-        </a>
+        <%= link_to "SIGN UP", new_user_registration_path, class: "bg-purple-500 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-full" %>
+        <%= link_to "LOG IN", new_user_session_path, class: "block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white" %>
       <% end %>
     </div>
   </div>
