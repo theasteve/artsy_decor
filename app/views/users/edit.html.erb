@@ -1,6 +1,3 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
-
   <%= form_for @user do |f| %>
     <div class="form-group">
       <%= f.label :avatar %>
@@ -29,3 +26,38 @@
       <%= f.submit "Edit profile", class: "btn btn-primary" %>
     </div>
   <% end %>
+
+  <div class="container mx-auto m-8">
+    <div class="w-full max-w-lg">
+      <%= form_for @user, html: { class: "bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" } do |f| %>
+        <div class="mb-4 inline-block">
+          <div class="rounded-full h-24 w-24 flex items-center justify-center bg-green-300">Circle</div>
+          <label class="block text-gray-700 text-4xl font-bold m-8"><%= @user.full_name %></label>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2">
+            <%= f.label :full_name, 'Full Name:' %>
+          </label>
+        <%= f.text_field :full_name, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline", placeholder: "Full Name"%>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2">
+              <%= f.label :bio, 'Bio:'%>
+              <p> Why did you join ArtsySpace?
+                What should other people here know about you?
+              </p>
+          </label>
+          <%= f.text_area :bio, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-64", placeholder: "Tell us about you!"%>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2">
+            <%= f.label :city, 'City:' %>
+          </label>
+          <%= f.text_field :city, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline", placeholder: "Location"%>
+        </div>
+        <div class="flex items-center justify-between">
+          <%= f.submit "Create", class: "shadow bg-teal-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
