@@ -4,10 +4,6 @@ Rails.application.routes.draw do
     registrations: 'registrations'
   }
 
-  devise_scope :users do
-    get 'sign_out', to: 'devise/sessions#destroy'
-  end
-
   root to: 'home#index'
 
   resources :users, only: [:show, :edit, :update, :destroy]
