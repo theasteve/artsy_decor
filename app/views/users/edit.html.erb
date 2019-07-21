@@ -1,38 +1,15 @@
-  <%= form_for @user do |f| %>
-    <div class="form-group">
-      <%= f.label :avatar %>
-      <%= f.file_field :avatar, as: :file, class: "form-control" %>
-    </div>
-
-    <div class="form-group">
-      <%= f.label :full_name, 'Full Name' %>
-      <%= f.text_field :full_name, autofocus: true, class: "form-control" %>
-    </div>
-
-    <div class="form-group">
-      <%= f.label :city, 'City' %>
-      <%= f.text_field :city, class: "form-control" %>
-    </div>
-
-    <div class="form-group">
-      <%= f.label :bio, 'Bio'%>
-        <p> Why did you join ArtsySpace?
-        What should other people here know about you?
-        </p>
-      <%= f.text_field :bio, class: "form-control"%>
-    </div>
-
-    <div class="form-group">
-      <%= f.submit "Edit profile", class: "btn btn-primary" %>
-    </div>
-  <% end %>
-
-  <div class="container mx-auto m-8">
-    <div class="w-full max-w-lg">
+  <div class="container mx-auto">
+    <div class="w-full my-6">
       <%= form_for @user, html: { class: "bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" } do |f| %>
-        <div class="mb-4 inline-block">
-          <div class="rounded-full h-24 w-24 flex items-center justify-center bg-green-300">Circle</div>
-          <label class="block text-gray-700 text-4xl font-bold m-8"><%= @user.full_name %></label>
+        <div class="mb-6 inline-block">
+          <% if @user.avatar.attached? %>
+            <%= image_tag @user.avatar, class: 'block lg:inline-block h-16 w-16 rounded-full mx-auto object-cover'%>
+          <% else %>
+            <div class="rounded-full h-24 w-24 flex items-center justify-center upload-btn-wrapper">
+              <%= f.file_field :avatar, as: :file, id: "profile-avatar" %>
+              <%= image_tag 'user.svg' %>
+            </div>
+          <% end %>
         </div>
         <div class="mb-4">
           <label class="block text-gray-700 text-sm font-bold mb-2">
@@ -61,3 +38,4 @@
       <% end %>
     </div>
   </div>
+</div>
