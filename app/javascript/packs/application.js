@@ -30,3 +30,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     })
   }
 });
+
+require("trix")
+require("@rails/actiontext")

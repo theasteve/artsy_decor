@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# User Controller
 class UsersController < ApplicationController
   def show
     @user =  User.find(params[:id])
@@ -20,15 +21,15 @@ class UsersController < ApplicationController
   end
 
   def destroy
-   @user = User.find(params[:id])
-   @user.destroy
+    @user = User.find(params[:id])
+    @user.destroy
 
-   redirect_to root_path
+    redirect_to root_path
   end
 
- private
+  private
 
- def user_params
-   params.require(:user).permit(:full_name, :city, :bio, :avatar)
- end
+  def user_params
+    params.require(:user).permit(:full_name, :city, :bio, :avatar)
+  end
 end
