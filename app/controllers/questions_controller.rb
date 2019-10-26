@@ -12,8 +12,8 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    @question = current_user.questions.create(question_params)
     binding.pry
+    @question = current_user.questions.create(question_params)
     if @question.save
       redirect_to @question
     else
@@ -24,7 +24,7 @@ class QuestionsController < ApplicationController
   def update
     @question = Question.find(params[:id])
 
-    if @question.update(questions_params)
+    if @question.update(question_params)
       redirect_to @question, notice: 'Question was successfully updated.'
     else
       render :edit

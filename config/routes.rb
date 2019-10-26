@@ -8,9 +8,11 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show, :edit, :update, :destroy]
 
-  resources :questions
+  resources :questions do
+    resources :comments, module: :questions
+  end
 
   resources :posts do
-    resource :comments, only: %i[show new create edit update]
+    resource :comments, module: :posts
   end
 end
