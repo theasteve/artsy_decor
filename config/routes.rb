@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show, :edit, :update, :destroy]
 
+  resources :questions
+
   resources :posts do
     resource :comments, only: %i[show new create edit update]
   end
