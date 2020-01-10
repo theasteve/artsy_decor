@@ -13,7 +13,7 @@ class QuestionsController < ApplicationController
 
   def create
     @question = current_user.questions.create(question_params)
-    binding.pry
+
     if @question.save
       redirect_to @question
     else
