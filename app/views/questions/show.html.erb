@@ -13,6 +13,7 @@
       <div class="border-t-2 border-gray-600 p-6 text-3xl">
           <%= @question.content %>
       </div>
+
       <%= render partial: 'comments/form', locals: { commentable: @question } %>
       <%= render partial: 'comments/comments', locals: { commentable: @question } %>
     </div>
