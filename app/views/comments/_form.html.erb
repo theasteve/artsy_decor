@@ -1,4 +1,12 @@
-<%= form_for [commentable, Comment.new] do |f| %>
-  <%= f.text_area :content, placeholder: 'Add a comment' %>
-  <%= f.submit %>
-<% end %>
+<div class="container flex justify-center">
+  <%= form_for [commentable, Comment.new], html: { class: "w-full max-w-4xl flex justify-center"} do |f| %>
+    <div class="flex items-end border border-teal-500 py-2 w-4/5">
+      <%= f.text_area :content,
+        class: "appearance-none resize-none h-40 bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none",
+        type: "text",
+        placeholder: "Post a comment!"
+       %>
+      <%= f.submit "Post Comment", class: "flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 m-1 rounded"  %>
+    </div>
+  <% end %>
+</div>
