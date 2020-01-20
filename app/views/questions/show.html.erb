@@ -2,16 +2,18 @@
 <div class="container mx-auto my-5">
   <div class="flex mb-4">
     <div class="w-full bg-white">
-      <div class="m-4">
-        <p class="font-semibold">
+      <div class="m-4 m-auto w-4/5">
+        <p class="font-semibold mt-8">
           <time>
             <%= @question.created_at.to_formatted_s(:month_day_comma_year) %>
           </time>
         </p>
         <p class="font-black text-5xl"><%= @question.title %></p>
       </div>
-      <div class="border-t-2 border-gray-600 p-6 text-3xl">
+      <div class="border-t-2 border-gray-600 text-3xl m-auto w-4/5">
+        <div class="h-56 my-8">
           <%= @question.content %>
+        </div>
       </div>
       <%= render partial: 'comments/form', locals: { commentable: @question } %>
       <%= render partial: 'comments/comments', locals: { commentable: @question } %>
