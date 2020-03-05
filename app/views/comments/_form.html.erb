@@ -1,5 +1,5 @@
 <div class="container flex justify-center">
-  <%= form_for [commentable, Comment.new], html: { class: "w-full max-w-4xl flex justify-center"} do |f| %>
+  <%= form_for [commentable, Comment.new], remote: true, html: { class: "w-full max-w-4xl flex justify-center"} do |f| %>
     <div class="flex items-end border border-teal-500 py-2 w-4/5">
       <%= f.text_area :content,
         class: "appearance-none resize-none h-40 bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none",

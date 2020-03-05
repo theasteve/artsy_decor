@@ -2,11 +2,11 @@
   <ul>
     <% commentable.comments.each do |comment| %>
       <li class="comments-li my-6">
-        <div>
+        <div class="flex" data-turbolinks-action="replace">
           <%= link_to user_path(comment.user) do %>
             <%= image_tag comment.user.avatar, class: 'block lg:inline-block h-12 w-12 rounded-full mx-auto object-cover'%>
           <% end %>
-          <div class="text-base inline-block ml-2">
+          <div class="text-base inline-block ml-2 flex-1">
             <p><%= comment.content %></p>
           </div>
         </div>
