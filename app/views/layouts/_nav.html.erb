@@ -11,15 +11,17 @@
   </div>
   <div class="text-right align-middle w-full block flex-grow lg:flex lg:items-center lg:w-auto">
     <div class="text-md lg:flex-grow">
-      <a href="/questions" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+        <%= link_to "Create Post", new_post_path, class: "bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 border-2 mr-4 rounded-sm" %>
+
+      <a href="/questions" class="block mt-4 font-bold lg:inline-block lg:mt-0 text-white hover:text-white mr-4">
         Community
       </a>
-      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+      <a href="#responsive-header" class="block mt-4 font-bold lg:inline-block lg:mt-0 text-white hover:text-white mr-4">
         About
       </a>
-      <% if current_user != nil && current_user.avatar.attached? %>
-        <%= image_tag current_user.avatar, class: 'block lg:inline-block h-12 w-12 rounded-full mx-auto object-cover'%>
-        <%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class: "block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white" %>
+      <% if current_user != nil %>
+        <%= user_avatar(current_user) %>
+        <%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class: "block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white" %>
       <% else %>
         <%= link_to "SIGN UP", new_user_registration_path, class: "bg-purple-500 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-full" %>
         <%= link_to "LOG IN", new_user_session_path, class: "block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white" %>
