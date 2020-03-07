@@ -1,4 +1,4 @@
-<div class="container flex justify-center">
+<div class="container mx-auto flex justify-center">
   <%= form_for [commentable, Comment.new], remote: true, html: { class: "w-full max-w-4xl flex justify-center"} do |f| %>
     <div class="flex items-end border border-teal-500 py-2 w-4/5">
       <%= f.text_area :content,
