@@ -1,11 +1,11 @@
-<div class="container mx-auto bg-white rounded-lg"
+<div class="container mx-auto bg-white rounded-lg shadow-lg mt-4">
   <div class="border-t-2 border-grey-lighter">
     <div class="container mx-auto py-6 my-8">
-      <div class="flex mt-6 ">
-        <div class="w-1/2 bg-grey m-8">
+      <div class="flex flex-wrap mt-6">
+        <div class="w-full md:w-8/12 px-4 mr-auto ml-auto">
           <%= image_tag @post.image, class: "rounded" %>
         </div>
-        <div class="w-1/2 font-serif m-8">
+        <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
           <p class="text-sm text-gray-600 flex items-center">
            <svg class="fill-current text-gray-500 w-3 h-3 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/><path d="M0 0h24v24H0z" fill="none"/>
@@ -13,9 +13,11 @@
            <%= @post.location %>
          </p>
           <h1 class="text-5xl font-black-darker font-black">  <%= @post.title %></h1>
-          <p class="text-grey-darker py-4 text-lg leading-normal h-48 break-words"><%= @post.description %></p>
+          <p class="text-grey-darker py-4 text-lg leading-normal overflow-scroll" style="min-height: 484px;"><%= @post.description %></p>
             <div class="flex items-center">
-              <%= image_tag @post.user.avatar, class: 'w-10 h-10 rounded-full mr-4 object-cover'%>
+              <%= link_to user_path(@post.user) do %>
+                <%= image_tag @post.user.avatar, class: 'w-10 h-10 rounded-full mr-4 object-cover'%>
+            <% end %>
               <div class="text-sm">
                 <p class="text-gray-900 leading-none"><%= @post.user.full_name %></p>
                 <p class="text-gray-600"><%= @post.created_at.to_date %></p>
