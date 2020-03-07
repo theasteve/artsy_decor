@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   root to: 'home#index'
 
+  get '/about', to: 'home#show'
+
   resources :users, only: [:show, :edit, :update, :destroy]
 
   resources :questions do
