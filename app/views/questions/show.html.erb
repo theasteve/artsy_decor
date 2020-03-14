@@ -19,6 +19,11 @@
   </div>
 </div>
 
-<%= render partial: 'comments/form', locals: { commentable: @question } %>
+<%= render partial: 'comments/form',
+  locals: { 
+    commentable: @question, 
+    form_styles: "border-2"
+  }
+%>
 <%= render partial: 'comments/comments', locals: { commentable: @question } %>
 
