@@ -1,4 +1,4 @@
-<div class="container mx-auto m-8"
+<div class="container mx-auto m-8">
 
   <div class="w-full max-w-lg">
     <%= form_for @post, html: { class: "bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" } do |f| %>
@@ -25,7 +25,7 @@
           <%= f.label :image, 'Image:' %>
         </label>
           <svg xmlns="http://www.w3.org/2000/svg" class="fill-current text-teal-500 inline-block h-12 w-12" viewBox="0 0 22 22"><path d="M19 7v2.99s-1.99.01-2 0V7h-3s.01-1.99 0-2h3V2h2v3h3v2h-3zm-3 4V8h-3V5H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-8h-3zM5 19l3-4 2 3 3-4 4 5H5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-          <%= f.file_field :image, as: :file %>
+          <%= f.file_field :image, direct_upload: true %>
         <p class="text-red-500 text-xs italic" id="file-name">Attach a file.</p>
       </div>
       <div class="flex items-center justify-between">
