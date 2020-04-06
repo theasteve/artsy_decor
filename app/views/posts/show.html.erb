@@ -3,7 +3,7 @@
     <div class="container mx-auto py-6 my-8">
       <div class="flex flex-wrap mt-6">
         <div class="w-full md:w-8/12 px-4 mr-auto ml-auto">
-          <%= image_tag @post.image, class: "rounded" %>
+          <%= cl_image_tag @post.image.key, class: "rounded" %>
         </div>
         <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
           <p class="text-sm text-gray-600 flex items-center">
@@ -13,10 +13,12 @@
            <%= @post.location %>
          </p>
           <h1 class="text-5xl font-black-darker font-black">  <%= @post.title %></h1>
-          <p class="text-grey-darker py-4 text-lg leading-normal overflow-scroll" style="min-height: 484px;"><%= @post.description %></p>
+          <div class="text-grey-darker py-4 text-lg leading-normal overflow-scroll" style="min-height: 484px;">
+            <%= @post.description %>
+          </div>
             <div class="flex items-center">
               <%= link_to user_path(@post.user) do %>
-                <%= image_tag @post.user.avatar, class: 'w-10 h-10 rounded-full mr-4 object-cover'%>
+                <%= cl_image_tag @post.user.avatar.key, format: :jpg, class: 'w-10 h-10 rounded-full mr-4 object-cover'%>
             <% end %>
               <div class="text-sm">
                 <p class="text-gray-900 leading-none"><%= @post.user.full_name %></p>

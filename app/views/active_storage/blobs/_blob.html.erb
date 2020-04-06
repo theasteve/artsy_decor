@@ -1,7 +1,7 @@
 <figure class="attachment attachment--<%= blob.representable? ? "preview" : "file" %> attachment--<%= blob.filename.extension %>">
   <% if blob.representable? %>
       <div class="max-w-xl mx-auto rounded overflow-hidden shadow-lg">
-        <%= image_tag blob.representation(resize_to_limit: local_assigns[:in_gallery] ? [ 800, 600 ] : [ 1024, 768 ]) %>
+        <%= cl_image_tag(blob.key, format: :jpg) %>
         <div class="px-6 py-4">
           <figcaption class="attachment__caption">
             <% if caption = blob.try(:caption) %>

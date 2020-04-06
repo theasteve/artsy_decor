@@ -24,7 +24,10 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.7'
 # Use Active Storage variant
 gem 'image_processing', '~> 1.2'
-
+# Dotenv rails
+gem 'dotenv-rails'
+# Cloudinary
+gem 'cloudinary'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
