@@ -18,7 +18,6 @@ class PostsController < ApplicationController
 
   def create
     @post = current_user.posts.create(post_params)
-    puts params
 
     if @post.save
       redirect_to @post
