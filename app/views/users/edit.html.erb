@@ -1,4 +1,4 @@
-  <div class="container mx-auto">
+  <div class="container mx-auto" style="min-height: 900px">
     <div class="w-full my-6">
       <%= form_for @user, html: { class: "bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" } do |f| %>
         <div class="mb-6 inline-block">
@@ -33,7 +33,7 @@
           <%= f.text_field :city, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline", placeholder: "Location"%>
         </div>
         <div class="flex items-center justify-between">
-          <%= f.submit "Create", class: "shadow bg-teal-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" %>
+          <%= f.submit "Update Profile", class: "shadow bg-teal-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" %>
         </div>
       <% end %>
     </div>

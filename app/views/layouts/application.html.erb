@@ -12,6 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Eva icons -->
+    <script src="https://unpkg.com/eva-icons"></script>
 
     <title>ArtsySpace | Improve your well being by decorating your room</title>
   </head>
@@ -20,5 +22,8 @@
     <%= render "layouts/nav" %>
     <%= yield %>
     <%= render "layouts/footer" %>
+    <script>
+      eva.replace()
+    </script>
   </body>
 </html>
