@@ -20,6 +20,7 @@
               <%= link_to user_path(@post.user) do %>
                 <%= cl_image_tag @post.user.avatar.key, format: :jpg, class: 'w-10 h-10 rounded-full mr-4 object-cover'%>
               <% end %>
+
               <div class="text-sm">
                 <p class="text-gray-900 leading-none"><%= @post.user.full_name %></p>
                 <p class="text-gray-600"><%= @post.created_at.to_date %></p>
