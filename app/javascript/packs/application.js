@@ -18,18 +18,5 @@ require("@rails/actiontext")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-
-document.addEventListener("DOMContentLoaded", function(event) {
-
-  const fileUploadElement = document.getElementById('file-upload');
-
-  if(fileUploadElement) {
-    fileUploadElement.addEventListener('change', function(){
-      const fileName = document.getElementById("post_image").files[0].name
-      const fileNameElement = document.getElementById('file-name');
-
-      fileNameElement.innerText = `${fileName}`
-    })
-  }
-});
+//= require posts.js
 

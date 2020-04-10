@@ -1,4 +1,4 @@
-<div>
+<div class="py-10">
   <div class="container mx-auto my-5 min-h-screen overflow-scroll">
     <div class="flex mb-4">
       <div class="w-full bg-white">
@@ -8,6 +8,16 @@
               <%= @question.created_at.to_formatted_s(:month_day_comma_year) %>
             </time>
           </p>
+          <% if @question.user == current_user %>
+            <div class="mx-auto float-right">
+              <%= link_to edit_question_path(@question) do %>
+                <i data-eva="edit-outline" data-eva-animation="zoom" data-eva-fill="#38b2ac" title="edit"></i>
+              <% end %>
+              <%= link_to @question, method: :delete, data: { confirm: 'Are you certain you want to delete this post?' } do %>
+                <i data-eva="trash-2-outline" data-eva-animation="zoom" data-eva-fill="red" title="delete"></i>
+              <% end %>
+            </div>
+          <% end %>
           <p class="font-black text-5xl"><%= @question.title %></p>
         </div>
         <div class="border-t-2 border-gray-600 text-2xl m-auto w-4/5">
@@ -22,7 +32,7 @@
   <%= render partial: 'comments/form',
     locals: { 
       commentable: @question, 
-      form_styles: "border-2"
+      form_styles: "border-2 w-4/5"
     }
   %>
   <%= render partial: 'comments/comments', locals: { commentable: @question } %>
