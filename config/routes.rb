@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     resources :comments, module: :questions
   end
 
-  resources :posts do
+  resources :posts,  except: :index do
     resource :comments, module: :posts
   end
 end
