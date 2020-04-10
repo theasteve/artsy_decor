@@ -19,12 +19,22 @@
             <div class="flex items-center">
               <%= link_to user_path(@post.user) do %>
                 <%= cl_image_tag @post.user.avatar.key, format: :jpg, class: 'w-10 h-10 rounded-full mr-4 object-cover'%>
-            <% end %>
+              <% end %>
               <div class="text-sm">
                 <p class="text-gray-900 leading-none"><%= @post.user.full_name %></p>
                 <p class="text-gray-600"><%= @post.created_at.to_date %></p>
               </div>
             </div>
+        </div>
+        <div class="px-4">
+          <% if @post.user == current_user %>
+            <%= link_to edit_post_path(@post) do %>
+              <i data-eva="edit-outline" data-eva-animation="zoom" data-eva-fill="#38b2ac" title="edit"></i>
+            <% end %>
+            <%= link_to @post, method: :delete, data: { confirm: 'Are you certain you want to delete this post?' } do %>
+              <i data-eva="trash-2-outline" data-eva-animation="zoom" data-eva-fill="red" title="delete"></i>
+            <% end %>
+          <% end %>
         </div>
       </div>
     </div>

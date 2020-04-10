@@ -1,24 +1,37 @@
-<h1>Post#new</h1>
-<p>Find me in app/views/posts/new.html.erb</p>
+<div class="container mx-auto m-8">
 
-<%= form_for @post do |f| %>
-
-  <div class="form-group">
-    <%= f.label :location, 'Location:' %>
-    <%= f.text_field :location, class: "form-control"%>
+  <div class="w-full">
+    <%= form_for @post, html: { class: "bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" } do |f| %>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2">
+          <%= f.label :title, 'Title:' %>
+        </label>
+        <%= f.text_field :title, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline", placeholder: "Title"%>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2">
+          <%= f.label :description, 'Description:' %>
+        </label>
+        <%= f.rich_text_area :description, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-64", placeholder: "Description"%>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2">
+          <%= f.label :location, 'Location:' %>
+        </label>
+        <%= f.text_field :location, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline", placeholder: "Location"%>
+      </div>
+      <div class="mb-6 upload-btn-wrapper" id="file-upload">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+          <%= f.label :image, 'Image:' %>
+        </label>
+          <svg xmlns="http://www.w3.org/2000/svg" class="fill-current text-teal-500 inline-block h-12 w-12" viewBox="0 0 22 22"><path d="M19 7v2.99s-1.99.01-2 0V7h-3s.01-1.99 0-2h3V2h2v3h3v2h-3zm-3 4V8h-3V5H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-8h-3zM5 19l3-4 2 3 3-4 4 5H5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+          <%= f.file_field :image, direct_upload: true %>
+        <p class="text-red-500 text-xs italic" id="file-name">Attach a file.</p>
+      </div>
+      <div class="flex items-center justify-between">
+        <%= f.submit "Edit", class: "shadow bg-teal-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" %>
+      </div>
+    <% end %>
   </div>
+</div>
 
-   <div class="form-group">
-     <%= f.label :description %>
-     <%= f.text_area :description, class: "form-control" %>
-   </div>
-
-   <div class="form-group">
-     <%= f.label :image %>
-     <%= f.file_field :image, as: :file, class: "form-control" %>
-   </div>
-
-   <div class="form-group">
-     <%= f.submit "Create", class: "btn btn-primary" %>
-   </div>
- <% end %>
