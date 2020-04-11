@@ -26,7 +26,7 @@ class QuestionsController < ApplicationController
   def update
     @question = Question.find(params[:id])
 
-    if @question.update(questions_params)
+    if @question.update(question_params)
       redirect_to @question, notice: 'Question was successfully updated.'
     else
       render :edit

@@ -7,29 +7,14 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-require("stylesheets/application.scss")
+require("stylesheets/application.css")
 require("trix")
 require("@rails/actiontext")
-
+require("packs/posts")
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
 // or the `imagePath` JavaScript helper below.
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-
-
-document.addEventListener("DOMContentLoaded", function(event) {
-
-  const fileUploadElement = document.getElementById('file-upload');
-
-  if(fileUploadElement) {
-    fileUploadElement.addEventListener('change', function(){
-      const fileName = document.getElementById("post_image").files[0].name
-      const fileNameElement = document.getElementById('file-name');
-
-      fileNameElement.innerText = `${fileName}`
-    })
-  }
-});
 

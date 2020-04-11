@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, only: [:new, :create, :destroy]
 
   def show
     @comment = Comment.find(params[:id])
@@ -21,6 +21,14 @@ class CommentsController < ApplicationController
   end
 
   def update
+  end
+
+  def destroy
+    @comment = Comment.find(params[:id])
+    @question = @comment.commentable
+    @comment.destroy!
+
+    redirect_to question_path(@question)
   end
 
   private
