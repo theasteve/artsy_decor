@@ -1,10 +1,5 @@
-// @import "tailwindcss/base";
-//
-// @import "tailwindcss/components";
-//
-// @import "tailwindcss/utilities";
+@import "tailwindcss/base";
 
-/* Using Sass or Less */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";

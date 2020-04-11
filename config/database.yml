@@ -25,3 +25,7 @@ test:
 production:
   adapter: postgresql
   prepared_statements: false
+  database: artsy_decor_production
+  url: <%= ENV['DATABASE_URL'] %>
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
