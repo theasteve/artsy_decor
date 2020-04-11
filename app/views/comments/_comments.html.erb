@@ -4,7 +4,7 @@
       <li class="comments-li my-6">
         <div class="flex" data-turbolinks-action="replace">
           <%= link_to user_path(comment.user) do %>
-            <%= image_tag comment.user.avatar, class: 'block lg:inline-block h-12 w-12 rounded-full mx-auto object-cover'%>
+            <%= cl_image_tag comment.user.avatar.key, format: :jpg, class: 'block lg:inline-block h-12 w-12 rounded-full mx-auto object-cover'%>
           <% end %>
           <div class="text-base inline-block ml-2 flex-1">
             <p><%= comment.content %></p>

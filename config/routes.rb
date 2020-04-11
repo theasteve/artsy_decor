@@ -14,7 +14,10 @@ Rails.application.routes.draw do
     resources :comments, module: :questions
   end
 
-  resources :posts,  except: :index do
+  resources :posts, except: :index do
     resource :comments, module: :posts
   end
+
+  get '*unmatched_route', to: 'home#not_found'
+
 end
