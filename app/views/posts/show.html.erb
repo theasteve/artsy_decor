@@ -1,9 +1,9 @@
-<div class="container mx-auto bg-white rounded-lg shadow-lg mt-4">
-  <div class="border-t-2 border-grey-lighter">
-    <div class="container mx-auto py-6 my-8">
-      <div class="flex flex-wrap mt-6">
-        <div class="w-full md:w-8/12 px-4 mr-auto ml-auto">
-          <%= cl_image_tag @post.image.key, class: "rounded" %>
+<div class="container mx-auto bg-white rounded-lg shadow-lg mt-10 mb-10">
+  <div>
+    <div class="container mx-auto">
+      <div class="flex flex-wrap">
+        <div class="w-full md:w-8/12">
+          <%= cl_image_tag @post.image.key %>
         </div>
         <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
           <p class="text-sm text-gray-600 flex items-center">

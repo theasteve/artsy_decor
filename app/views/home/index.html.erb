@@ -3,7 +3,7 @@
       <div class="w-1/3 p-2 flex">
           <div class="max-w-sm rounded overflow-hidden shadow-lg flex flex-col justify-between">
             <%= link_to post_path(post) do %>
-              <%= cl_image_tag(post.image.key, :format => :png , class: "card-home__img") %>
+              <%= cl_image_tag(post.image.key, :format => :jpg , class: "card-home__img object-cover") %>
             <% end %>
               <div class="px-6 py-4">
                 <div class="font-bold text-xl mb-2"><%= post.title %></div>
