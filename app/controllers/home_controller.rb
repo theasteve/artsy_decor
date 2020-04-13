@@ -1,4 +1,6 @@
 class HomeController < ApplicationController
+  include UsersHelper
+
   def index
     @posts = Post.all
   end

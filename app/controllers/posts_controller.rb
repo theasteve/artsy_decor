@@ -1,5 +1,10 @@
+# frozen_string_literal: true
+
+# Controller for Posts
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:new]
+  include UsersHelper
+
 
   def show
     @post = Post.find(params[:id])
