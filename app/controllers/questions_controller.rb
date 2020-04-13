@@ -1,5 +1,6 @@
 class QuestionsController < ApplicationController
   before_action :authenticate_user!, only: [:new]
+  include UsersHelper
 
   def index
     @questions = Question.all

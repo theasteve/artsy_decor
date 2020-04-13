@@ -10,7 +10,7 @@
               </div>
               <div class="flex items-center m-4">
               <%= link_to user_path(post.user) do %>
-                <%= cl_image_tag post.user.avatar.key, class: 'w-10 h-10 rounded-full mr-4 object-cover'%>
+                <%= user_avatar(post.user) %>
               <% end %>
                 <div class="text-sm">
                   <p class="text-gray-900 leading-none"><%= post.user.full_name %></p>
