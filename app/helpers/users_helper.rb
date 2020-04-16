@@ -2,8 +2,9 @@
 
 # User helper to display user avatar
 module UsersHelper
-  AVATAR_CLOUDINARY_IMAGE_ID = '371909290_ROCKET_400_vwextb'
+  AVATAR_CLOUDINARY_IMAGE_ID = 'add_wzvex8'
   AVATAR_STYLES = 'block lg:inline-block h-12 w-12 rounded-full mx-auto object-cover'
+  AVATAR_ADD_ICON = 'add_wzvex8'
 
   def user_avatar(user)
     if user.avatar.attached?
