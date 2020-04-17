@@ -5,9 +5,9 @@
           <% if @user.avatar.attached? %>
             <%= cl_image_tag @user.avatar.key, class: 'block lg:inline-block h-16 w-16 rounded-full mx-auto object-cover'%>
           <% else %>
-            <div class="rounded-full h-24 w-24 flex items-center justify-center upload-btn-wrapper">
+            <div class="rounded-full h-24 w-24 flex items-center justify-center upload-btn-wrapper" id="profile-avatar-preview">
               <%= f.file_field :avatar, as: :file, id: "profile-avatar" %>
-              <%= cl_image_tag '371909290_ROCKET_400_vwextb', class: 'hover:bg-transparent' %>
+              <%= cl_image_tag "#{ UsersHelper::AVATAR_ADD_ICON }", width: '50', height: '50', class: 'hover:bg-transparent' %>
             </div>
           <% end %>
         </div>

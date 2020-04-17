@@ -11,7 +11,7 @@
         <label class="block text-gray-700 text-sm font-bold mb-2">
           <%= f.label :content, 'Content:'%>
         </label>
-        <%= f.rich_text_area :content, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-64", placeholder: "Ask ArtsySpace how to style your new place!"%>
+        <%= f.rich_text_area :content, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-64 overflow-scroll", placeholder: "Ask ArtsySpace how to style your new place!"%>
       </div>
       <div class="flex items-center justify-between">
         <%= f.submit "Ask!", class: "shadow bg-teal-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" %>
