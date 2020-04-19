@@ -1,5 +1,4 @@
-document.addEventListener('readystatechange', event => {
- if (event.target.readyState === "complete") { 
+document.addEventListener('turbolinks:load', event => {
   const fileUploadElement = document.getElementById('file-upload');
 
   if(fileUploadElement) {
@@ -15,7 +14,7 @@ document.addEventListener('readystatechange', event => {
  * Display the image in the file input when added to the form.
  * Replace avatar with image selected.
  */
-  const profileAvatarBlock = document.getElementById('profile-avatar');
+  let profileAvatarBlock = document.getElementById('profile-avatar');
 
   function showImage(input) {
     if (input.files && input.files[0]) {
@@ -37,8 +36,9 @@ document.addEventListener('readystatechange', event => {
     }
   }
 
-  profileAvatarBlock.addEventListener('change', function() {
-      showImage(this);
-  })
- }
+  if (profileAvatarBlock) {
+    profileAvatarBlock.addEventListener('change', function() {
+        showImage(this);
+    })
+  }
 });
