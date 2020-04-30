@@ -15,11 +15,22 @@
     <!-- Eva icons -->
     <script src="https://unpkg.com/eva-icons"></script>
 
+    <script src="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns-framework@v0.0.23/dist/utilities/toggle/toggle.iffe.js"></script>
+    <!-- NYCO Patterns Feed -->
+    <script src="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns@v2.2.3/dist/objects/feed/feed.js" type="text/javascript"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.js?features=Promise&gated=gated" type="text/javascript"></script>
+      <script>
+         window.onload = function () { 
+           var toggle = new Toggle();
+         }
+      </script>
+
     <title>ArtsySpace | Improve your well being by decorating your room</title>
   </head>
 
   <body>
     <%= render "layouts/nav" %>
+    <%= render "layouts/mobile_nav" %>
     <%= yield %>
     <%= render "layouts/footer" %>
     <script>
