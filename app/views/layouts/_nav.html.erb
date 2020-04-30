@@ -5,11 +5,10 @@
     <% end %>
   </div>
   <div class="block lg:hidden">
-    <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
-      <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-    </button>
+     <button data-js="toggle" aria-pressed="false" aria-expanded="false"
+             aria-controls="navigation" class="text-white cursor-pointer underline font-bold" id="menu-btn">Menu</button>
   </div>
-  <div class="text-right align-middle w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+  <div id="default-nav" class="text-right align-middle w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden">
     <div class="text-md lg:flex-grow">
         <%= link_to "Create Post", new_post_path, class: "bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 border-2 mr-4 rounded-sm" %>
 
