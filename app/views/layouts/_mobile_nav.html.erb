@@ -11,8 +11,7 @@
 
                 <%= link_to "Community Questions", questions_path , class:"block p-3 text-h4 font-normal no-underline hover:bg-secondary-pink-50t" %>
 
-                <%= link_to "Posts", root_path , class:"block p-3 text-h4 font-normal no-underline hover:bg-secondary-pink-50t" %>
-
+                <%= link_to "Posts", posts_path , class:"block p-3 text-h4 font-normal no-underline hover:bg-secondary-pink-50t" %>
 
                 <%= link_to "Log Out", destroy_user_session_path, class:"block p-3 text-h4 font-normal no-underline hover:bg-secondary-pink-50t" %>
                 <%= link_to "Create Post", new_post_path, class: "block p-3 text-h4 font-normal no-underline hover:bg-secondary-pink-50t" %>
@@ -30,6 +29,10 @@
 
                 <a href="/questions" class="block p-3 text-h4 font-normal no-underline hover:bg-secondary-pink-50t">
                   Community
+                </a>
+
+                <a href="/posts" class="block p-3 text-h4 font-normal no-underline hover:bg-secondary-pink-50t">
+                  Posts
                 </a>
 
                 <a href="/about" class="block p-3 text-h4 font-normal no-underline hover:bg-secondary-pink-50t">
