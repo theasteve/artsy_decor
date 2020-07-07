@@ -1,10 +1,6 @@
 class HomeController < ApplicationController
   include UsersHelper
 
-  def index
-    @posts = Post.all
-  end
-
   def show; end
 
   def not_found

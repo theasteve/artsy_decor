@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     registrations: 'registrations'
   }
 
-  root to: 'home#index'
+  root to: 'home#show'
 
   get '/about', to: 'home#show'
 
@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     resources :comments, module: :questions
   end
 
-  resources :posts, except: :index do
+  resources :posts do
     resource :comments, module: :posts
   end
 

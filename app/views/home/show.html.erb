@@ -5,7 +5,7 @@
       >
         <div
           class="absolute top-0 w-full h-full bg-center bg-cover"
-          style='background-image: url("<%= asset_path('string-lights-hanged.jpg') %>")'
+          style='background-image: url("<%= asset_path('brown-wooden.jpg') %>")'
         >
           <span
             id="blackOverlay"
@@ -15,16 +15,16 @@
         <div class="container relative mx-auto">
           <div class="items-center flex flex-wrap">
             <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-              <div>
+              <div class="mb-8">
                 <h1 class="text-white font-semibold text-5xl">
-                  Decoration Made Easier.
+                  Make Your Home A Sanctuary With Thoughtful Design Today.
                 </h1>
                 <p class="mt-4 text-lg text-gray-300">
-                  See how others are decorating their rooms. Ask the community
-                  questions on what colors to use or where other users bought
-                  the items they are using to decorate their spaces.
+                  Join the community to get inspiration, ask questions, and earn money through affiliate marketing.
                 </p>
               </div>
+              <%= link_to "SIGN UP", new_user_registration_path, class: "bg-teal-500 hover:bg-teal-700 text-white font-bold mt-4 py-3 px-4 rounded" %>
+
             </div>
           </div>
         </div>
@@ -57,12 +57,11 @@
               >
                 <div class="px-4 py-5 flex-auto">
                   <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-teal-500">
-                    🏠
+                    💰
                   </div>
-                  <h6 class="text-xl font-semibold">Improve your mood</h6>
+                  <h6 class="text-xl font-semibold">Promote your products</h6>
                   <p class="mt-2 mb-4 text-gray-600">
-                     By improving the atmosphere at your home you will have a
-                     positive impact on your mental health.
+                    Earn money through affiliate marketing by adding the links promoting the products you used in your decorations.
                   </p>
                 </div>
               </div>
@@ -75,10 +74,9 @@
                   <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-teal-500">
                   🎨
                   </div>
-                  <h6 class="text-xl font-semibold">Ask the community</h6>
+                  <h6 class="text-xl font-semibold">Get inspiration</h6>
                   <p class="mt-2 mb-4 text-gray-600">
-                    No need to hire an interior designer. Ask others in the community
-                    how are they going about decorating their spaces.
+                    No need to hire an interior designer, see how others are decorating their spaces and where to shop for the most affordable items.
                   </p>
                 </div>
               </div>
@@ -91,12 +89,11 @@
                   <div
                     class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-teal-500"
                   >
-                    💰
+                    🏠
                   </div>
-                  <h6 class="text-xl font-semibold">Save up</h6>
+                  <h6 class="text-xl font-semibold">Share your place</h6>
                   <p class="mt-2 mb-4 text-gray-600">
-                    Instead of buying expensive decorations items get
-                    directions on how you can create the decorations you want.
+                    Show ArtsySpace your decoration skills, and inspire others in the community.
                   </p>
                 </div>
               </div>
@@ -110,19 +107,19 @@
                 <%= fa_icon('home', class: 'text-2xl text-teal-500') %>
               </div>
               <h3 class="text-3xl mb-2 font-semibold leading-normal">
-                Show us your room design
+                Who we are
               </h3>
               <p
                 class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700"
               >
-                Upload an image of your room. Let others see how you are decorating
-                your place.
+              ArtsySpace is an online community of people who enjoy decorating spaces. Join ArtsySpace, to
+              ask questions, get inspirations, promote  your products, earn money and make your home a sanctuary.
+
               </p>
               <p
                 class="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700"
               >
-                It's easy! Sign up, upload a picture of your room and ask other members on
-                the communit for advise and tips on decoration.
+              Sign up and show us how you designed and decorated your space.
               </p>
             </div>
             <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
@@ -148,12 +145,10 @@
                     ></polygon>
                   </svg>
                   <h4 class="text-xl font-bold text-white">
-                    Improve your well being
+                    It's time to improve your room design
                   </h4>
                   <p class="text-md font-light mt-2 text-white">
-                    The interior design of your room can have huge impacts on your
-                    mental health. ArtsySpace will help you decorate your room to improve
-                    your well being!
+                    Check out some of the awesome decorations of ArtsySpace users.
                   </p>
                 </blockquote>
               </div>
@@ -198,10 +193,9 @@
                   <i class="fas fa-user-friends teal-500 text-white fa-2x"></i>
 
                 </div>
-                <h3 class="text-3xl font-semibold">Join Our Community</h3>
+                <h3 class="text-3xl font-semibold">How it works</h3>
                 <p class="mt-4 text-lg leading-relaxed text-gray-600">
-                  ArtsySpace is a community of people wanting to transform the
-                  interior design of their homes to live a better life.
+                  It's easy! Sign up and upload images of your decorations. You have affiliate marketing links? Add those to the post description.
                 </p>
                 <ul class="list-none mt-6">
                   <li class="py-2">
@@ -214,21 +208,8 @@
                       </div>
                       <div>
                         <h4 class="text-gray-600">
-                          Improve your mood
+                          Sign up and tell us a little bit about yourself.
                         </h4>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="py-2">
-                    <div class="flex items-center">
-                      <div>
-                        <span
-                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-teal-500 mr-3"
-                          ><i class="fas fa-pencil-ruler text-white"></i
-                        ></span>
-                      </div>
-                      <div>
-                        <h4 class="text-gray-600">Get tips on how to redesign your room</h4>
                       </div>
                     </div>
                   </li>
@@ -241,120 +222,24 @@
                         ></span>
                       </div>
                       <div>
-                        <h4 class="text-gray-600">Save money</h4>
+                        <h4 class="text-gray-600">Upload images of your decoration and<br> links to promote your products or the products you love.</h4>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="py-2">
+                    <div class="flex items-center">
+                      <div>
+                        <span
+                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-teal-500 mr-3"
+                          ><i class="fas fa-pencil-ruler text-white"></i
+                        ></span>
+                      </div>
+                      <div>
+                        <h4 class="text-gray-600">Browse posts and get inspirations to decorate your home.</h4>
                       </div>
                     </div>
                   </li>
                 </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="pb-20 relative block bg-gray-900">
-        <div
-          class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
-          style="height: 80px; transform: translateZ(0px);"
-        >
-          <svg
-            class="absolute bottom-0 overflow-hidden"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="none"
-            version="1.1"
-            viewBox="0 0 2560 100"
-            x="0"
-            y="0"
-          >
-            <polygon
-              class="text-gray-900 fill-current"
-              points="2560 0 2560 100 0 100"
-            ></polygon>
-          </svg>
-        </div>
-        <div class="container mx-auto px-4 lg:pt-24 lg:pb-64">
-          <div class="flex flex-wrap text-center justify-center">
-            <div class="w-full lg:w-6/12 px-4">
-              <h2 class="text-4xl font-semibold text-white">Coming Soon</h2>
-              <p class="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
-                Decorate your room and improve your well being.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="relative block py-24 lg:pt-0 bg-gray-900">
-        <div class="container mx-auto px-4">
-          <div class="flex flex-wrap justify-center lg:-mt-64 -mt-48">
-            <div class="w-full lg:w-6/12 px-4">
-              <div
-                class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300"
-              >
-                <div class="flex-auto p-5 lg:p-10">
-                  <h4 class="text-2xl font-semibold">Would you like ArtsySpace to be build?</h4>
-                  <p class="leading-relaxed mt-1 mb-4 text-gray-600">
-                    Sign up if you would like to see ArtsySpace be build, and to find out when it’s ready.
-                  </p>
-                  <!-- Begin Mailchimp Signup Form -->
-                  <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-                  <style type="text/css">
-                     #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-                     /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-                     We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-                  </style>
-                  <div id="mc_embed_signup">
-                     <form action="https://gmail.us4.list-manage.com/subscribe/post?u=4d65b6cdc2f37677e0c9ae908&amp;id=dce535d005" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" style="padding: 0;" novalidate>
-                        <div id="mc_embed_signup_scroll" class="bg-gray-300">
-                           <div class="relative w-full mb-3 mc-field-group">
-                             <label
-                               class="block uppercase text-gray-700 text-xs font-bold mb-2"
-                               for="mce-EMAIL"
-                               >Email</label
-                             ><input
-                               type="email"
-                               value=""
-                               name="EMAIL"
-                               class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full required email"
-                               placeholder="Email"
-                               style="transition: all 0.15s ease 0s;"
-                               id="mce-EMAIL"
-                             />
-                           </div>
-                           <div class="relative w-full mb-3 mt-8 mc-field-group">
-                             <label
-                               class="block uppercase text-gray-700 text-xs font-bold mb-2"
-                               for="mce-FNAME"
-                               >Full Name</label
-                             ><input
-                               type="text"
-                               name="FNAME"
-                               class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
-                               placeholder="Full Name"
-                               style="transition: all 0.15s ease 0s;"
-                               id="mce-FNAME"
-                             />
-                           </div>
-                           <div id="mce-responses" class="clear">
-                              <div class="response" id="mce-error-response" style="display:none"></div>
-                              <div class="response" id="mce-success-response" style="display:none"></div>
-                           </div>
-                           <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                           <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_4d65b6cdc2f37677e0c9ae908_dce535d005" tabindex="-1" value=""></div>
-                           <div class="text-center mt-6 clear">
-                             <input
-                             type="submit"
-                             value="Subscribe"
-                             name="subscribe"
-                             style="transition: all 0.15s ease 0s;"
-                             class="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
-                             id="mc-embedded-subscribe"
-                             >
-                           </div>
-                        </div>
-                     </form>
-                  </div>
-                  <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-                  <!--End mc_embed_signup-->
-                </div>
               </div>
             </div>
           </div>
@@ -386,7 +271,7 @@
           <div class="w-full lg:w-6/12 px-4">
             <h4 class="text-3xl font-semibold">Let's keep in touch!</h4>
             <h5 class="text-lg mt-0 mb-2 text-gray-700">
-              We'll send you an email when ArtsySpace launches!
+              For feedback reach out to stevenaguilarcs@gmail.com
             </h5>
           </div>
         </div>
@@ -415,4 +300,3 @@
     }
   </script> -->
 </html>
-
